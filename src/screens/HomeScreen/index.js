@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Text, ActivityIndicator, StyleSheet} from 'react-native';
+import {View, ActivityIndicator, StyleSheet, ScrollView} from 'react-native';
 
 import Stories from '../../components/Stories';
 import Posts from '../../components/Posts';
@@ -24,19 +24,15 @@ const HomeScreen = () => {
     return <ActivityIndicator />;
   } else {
     return (
-      <>
+      <ScrollView>
         <Stories styles={styles.stories} />
         <Posts posts={posts} />
         {/* <Post post={posts[0]} /> */}
-      </>
+      </ScrollView>
     );
   }
 };
 
-const styles = StyleSheet.create({
-  stories: {
-    flex: 2,
-  },
-});
+const styles = StyleSheet.create({});
 
 export default HomeScreen;
