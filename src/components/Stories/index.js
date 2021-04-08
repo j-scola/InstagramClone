@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, FlatList, StyleSheet} from 'react-native';
+import {View, FlatList, StyleSheet, Image} from 'react-native';
 import {v4} from 'react-native-uuid';
 // import ProfilePicture from '../ProfilePicture';
 import AddYourStory from '../AddYourStory';
@@ -53,23 +53,36 @@ const data = [
 const Stories = () => {
   return (
     <View style={styles.container}>
-      <AddYourStory uri={uri} username="Your Story" />
-      <FlatList
-        data={data}
-        keyExtractor={({id}) => id}
-        horizontal={true}
-        renderItem={({item}) => (
-          <Story uri={item.profilePic} username={item.username} />
-        )}
+      <Image
+        source={require('../../assets/images/iglogo.png')}
+        style={styles.logo}
       />
+      <View style={styles.stories}>
+        <AddYourStory uri={uri} username="Your Story" />
+        <FlatList
+          data={data}
+          keyExtractor={({id}) => id}
+          horizontal={true}
+          renderItem={({item}) => (
+            <Story uri={item.profilePic} username={item.username} />
+          )}
+        />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
     marginBottom: 10,
+  },
+  logo: {
+    height: 30,
+    width: 100,
+    marginLeft: 5,
+  },
+  stories: {
+    flexDirection: 'row',
   },
 });
 

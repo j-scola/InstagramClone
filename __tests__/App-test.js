@@ -15,6 +15,26 @@ jest.mock('react-native-vector-icons/MaterialCommunityIcons', () => {
   Icon.loadFont = () => {};
   return Icon;
 });
+jest.mock('react-native-vector-icons/Feather', () => {
+  const React = require('react');
+  class Icon extends React.Component {
+    render() {
+      return React.createElement('Icon');
+    }
+  }
+  Icon.loadFont = () => {};
+  return Icon;
+});
+jest.mock('react-native-vector-icons/FontAwesome', () => {
+  const React = require('react');
+  class Icon extends React.Component {
+    render() {
+      return React.createElement('Icon');
+    }
+  }
+  Icon.loadFont = () => {};
+  return Icon;
+});
 
 it('should render an app', () => {
   render(<App />);
