@@ -69,6 +69,7 @@ const Stories = () => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    marginBottom: 10,
   },
 });
 

@@ -29,10 +29,12 @@ const PostHeader = ({username, location}) => {
 const styles = StyleSheet.create({
   bar: {
     flexDirection: 'row',
-    height: 30,
+    height: 50,
     alignItems: 'center',
     justifyContent: 'space-between',
-    margin: 10,
+    padding: 10,
+    borderTopColor: 'rgba(171, 171, 171, 0.5)',
+    borderTopWidth: 0.5,
   },
   username: {},
   head: {
