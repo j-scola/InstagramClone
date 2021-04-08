@@ -57,17 +57,17 @@ const Stories = () => {
         source={require('../../assets/images/iglogo.png')}
         style={styles.logo}
       />
-      <View style={styles.stories}>
-        <AddYourStory uri={uri} username="Your Story" />
-        <FlatList
-          data={data}
-          keyExtractor={({id}) => id}
-          horizontal={true}
-          renderItem={({item}) => (
-            <Story uri={item.profilePic} username={item.username} />
-          )}
-        />
-      </View>
+      <FlatList
+        data={data}
+        keyExtractor={({id}) => id}
+        horizontal={true}
+        renderItem={({item}) => (
+          <Story uri={item.profilePic} username={item.username} />
+        )}
+        ListHeaderComponent={() => (
+          <AddYourStory uri={uri} username="Your Story" />
+        )}
+      />
     </View>
   );
 };
