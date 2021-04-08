@@ -6,7 +6,7 @@ import ProfilePicture from '../ProfilePicture/index';
 const Story = ({uri, username}) => {
   return (
     <View style={styles.conatiner} testID="story">
-      <ProfilePicture uri={uri} />
+      <ProfilePicture uri={uri} borderless={false} size="default" />
       <Text style={styles.name}>{username}</Text>
     </View>
   );
@@ -15,6 +15,7 @@ const Story = ({uri, username}) => {
 const styles = StyleSheet.create({
   name: {
     alignSelf: 'center',
+    fontSize: 12,
   },
   container: {
     height: 80,

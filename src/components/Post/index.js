@@ -1,13 +1,15 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 
-import PostHead from '../PostHead';
+import PostHeader from '../PostHeader';
+import PostFooter from '../PostFooter';
 
 const Post = ({post}) => {
   return (
     <View testID="post">
-      <PostHead username={post.username} />
+      <PostHeader username={post.username} />
       <Image source={{uri: post.image}} style={styles.image} />
+      <PostFooter />
     </View>
   );
 };
