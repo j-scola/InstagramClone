@@ -5,7 +5,7 @@ import ProfilePicture from '../ProfilePicture/index';
 
 const Story = ({uri, username}) => {
   return (
-    <View style={styles.conatiner}>
+    <View style={styles.conatiner} testID="story">
       <ProfilePicture uri={uri} />
       <Text style={styles.name}>{username}</Text>
     </View>

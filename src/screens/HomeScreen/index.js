@@ -10,25 +10,23 @@ const HomeScreen = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    utils
-      .generatePosts(3)
-      .then(result => {
-        console.log(result);
-        setPosts(result);
-        setLoading(false);
-      })
-      .catch(console.log);
+    let result = utils.generatePosts(3);
+    setPosts(result);
+    setLoading(false);
   }, []);
 
   if (isLoading) {
     return <ActivityIndicator />;
   } else {
     return (
-      <ScrollView>
-        <Stories styles={styles.stories} />
-        <Posts posts={posts} />
+      <View>
+        {/* <Stories styles={styles.stories} /> */}
+        <Posts
+          posts={posts}
+          listHeaderComponent={() => <Stories styles={styles.stories} />}
+        />
         {/* <Post post={posts[0]} /> */}
-      </ScrollView>
+      </View>
     );
   }
 };

@@ -1,7 +1,7 @@
 import Faker from 'faker';
 import {v4} from 'react-native-uuid';
 import axios from 'axios';
-import api from '../../private';
+import api from '../private';
 
 // need to make this function private
 
@@ -9,7 +9,7 @@ export default {
   getImage: () => {
     return axios.get(api.apiKeys.testRequest);
   },
-  generatePosts: async count => {
+  generatePosts: count => {
     const data = [];
     for (var i = 0; i < count; i++) {
       // let image = await getImage();

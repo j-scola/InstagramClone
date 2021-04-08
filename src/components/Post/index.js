@@ -5,7 +5,7 @@ import PostHead from '../PostHead';
 
 const Post = ({post}) => {
   return (
-    <View>
+    <View testID="post">
       <PostHead username={post.username} />
       <Image source={{uri: post.image}} style={styles.image} />
     </View>

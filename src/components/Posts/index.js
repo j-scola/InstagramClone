@@ -3,7 +3,7 @@ import {View, Text, FlatList} from 'react-native';
 
 import Post from '../Post';
 
-const Posts = ({posts}) => {
+const Posts = ({posts, listHeaderComponent}) => {
   const renderItem = post => {
     return <Post post={post.item} />;
   };
@@ -13,6 +13,7 @@ const Posts = ({posts}) => {
       data={posts}
       keyExtractor={({id}) => id}
       renderItem={renderItem}
+      ListHeaderComponent={listHeaderComponent}
     />
   );
 };
