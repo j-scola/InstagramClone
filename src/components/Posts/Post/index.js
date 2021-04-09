@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Dimensions, Image, StyleSheet} from 'react-native';
 
 import PostHeader from '../PostHeader';
 import PostFooter from '../PostFooter';
@@ -9,15 +9,19 @@ const Post = ({post}) => {
     <View testID="post">
       <PostHeader username={post.username} />
       <Image source={{uri: post.image}} style={styles.image} />
-      <PostFooter />
+      <PostFooter
+        username={post.username}
+        postCaption={post.caption}
+        comments={post.comments}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   image: {
-    height: 350,
-    width: '100%',
+    height: Dimensions.get('window').width,
+    width: Dimensions.get('window').width,
   },
 });
 

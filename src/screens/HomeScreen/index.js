@@ -20,17 +20,23 @@ const HomeScreen = () => {
   } else {
     return (
       <View>
-        {/* <Stories styles={styles.stories} /> */}
+        <Stories style={styles.stories} />
         <Posts
           posts={posts}
-          listHeaderComponent={() => <Stories styles={styles.stories} />}
+          style={styles.posts}
+          // listHeaderComponent={() => }
         />
-        {/* <Post post={posts[0]} /> */}
       </View>
     );
   }
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  stories: {
+    // position: 'sticky',
+    // top: 0,
+  },
+  posts: {},
+});
 
 export default HomeScreen;

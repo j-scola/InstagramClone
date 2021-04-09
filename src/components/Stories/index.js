@@ -67,6 +67,7 @@ const Stories = () => {
         ListHeaderComponent={() => (
           <AddYourStory uri={uri} username="Your Story" />
         )}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );

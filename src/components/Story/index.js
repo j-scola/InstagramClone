@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, View, Text, StyleSheet} from 'react-native';
 
-import ProfilePicture from '../ProfilePicture/index';
+import ProfilePicture from '../ProfilePicture';
 
 const Story = ({uri, username}) => {
   return (

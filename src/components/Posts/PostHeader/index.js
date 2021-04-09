@@ -3,7 +3,7 @@ import {Text, StyleSheet, View} from 'react-native';
 
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import ProfilePicture from '../ProfilePicture';
+import ProfilePicture from '../../ProfilePicture';
 
 MaterialCommunityIcon.loadFont();
 

@@ -19,14 +19,16 @@ export default {
         image: 'https://picsum.photos/350',
         likes: Faker.datatype.number(),
         comments: [],
+        caption: Faker.lorem.words(),
       };
 
-      // for (var j = 0; j < Math.random() * 4; j++) {
-      //   newObj.comments.push({
-      //     username: Faker.internet.userName(),
-      //     comment: Faker.lorem.sentence(),
-      //   });
-      // }
+      for (var j = 0; j < Math.random() * 4; j++) {
+        newObj.comments.push({
+          username: Faker.internet.userName(),
+          comment: Faker.lorem.sentence(),
+          id: v4(),
+        });
+      }
       data.push(newObj);
     }
     return data;
